@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #021324;
+    color: rgba(255, 255, 255, 0.801);
+    font-family: 'Merriweather', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.container {
+    perspective: 590px;
+    margin-bottom: 30px;
+}
+
+.movie-container select {
+    padding: 5px 15px;
+    margin-left: 10px;
+    color: #140101;
+    background-color: #bcf7ff;
+    appearance: none;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1.2rem;
+}
+
+.seat {
+    background-color: #444451;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.showcase {
+    background-color: #000d1ae3;
+    border-radius: 10px;
+    display: flex;
+    list-style-type: none;
+    padding: 5px 15px;
+    color: rgba(214, 214, 214, 0.651);
+    justify-content: center;
+}
+
+.showcase li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 10px;
+}
+
+.showcase small {
+    margin: 0 10px;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 18px;
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 18px;
+}
+
+.seat.occupied {
+    background-color: blanchedalmond;
+}
+
+.seat.selected {
+    background-color: #6feaf6
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.row {
+    display: flex;
+}
+
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 2px;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.701);
+}
+
+p.text {
+    margin: 5px 0;
+}
+
+p.text span {
+    color: #5cf1ff;
+    font-family: 'Redressed', cursive;
+}
